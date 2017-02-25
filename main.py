@@ -37,5 +37,17 @@ print("Result:")
 print_matrix(matrix4)
 print("")
 
-draw_lines( matrix, screen, color )
+#actual picture
+matrixA = new_matrix()
+
+for i in range(100):
+    add_edge(matrixA,500,500-5*i,0,5*i,0,0)
+for i in range(100):
+    add_edge(matrixA,500-5*i,500,0,5*i,0,0)
+for i in range(100):
+    add_edge(matrixA,0,500-5*i,0,5*i,0,0)
+for i in range(100):
+    add_edge(matrixA,500-5*i,0,0,5*i,0,0)
+
+draw_lines( matrixA, screen, color )
 display(screen)
