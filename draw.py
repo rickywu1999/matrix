@@ -2,15 +2,28 @@ from display import *
 from matrix import *
 
 
-def draw_lines( matrix, screen, color ):
-    pass
+def draw_lines( m, screen, color ):
+    for a in range(0,len(m[0]), 2):
+        draw_line(m[0][a],m[1][a],m[0][a+1],m[0][a+1],screen,color)
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    add_point(matrix,x0,y0,z0)
+    add_point(matrix,x1,y1,z1)
 
 def add_point( matrix, x, y, z=0 ):
-    pass
-
+    a = 0;
+    while (a<len(matrix[0])) and (matrix[3][a] != 0):
+        a+=1
+    if a<len(matrix[0]):
+        matrix[0][a] = x
+        matrix[1][a] = y
+        matrix[2][a] = z
+        matrix[3][a] = 1
+    else:
+        matrix[0].append(x)
+        matrix[1].append(y)
+        matrix[2].append(z)
+        matrix[3].append(1)
 
 
 
