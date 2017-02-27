@@ -41,13 +41,14 @@ print("")
 matrixA = new_matrix()
 
 for i in range(100):
-    add_edge(matrixA,500,500-5*i,0,5*i,0,0)
-for i in range(100):
-    add_edge(matrixA,500-5*i,500,0,5*i,0,0)
-for i in range(100):
-    add_edge(matrixA,0,500-5*i,0,5*i,0,0)
-for i in range(100):
-    add_edge(matrixA,500-5*i,0,0,5*i,0,0)
+    add_edge(matrixA,500-5*i,500-5*i,0,5*i,0,0)
+    add_edge(matrixA,500-5*i,500-5*i,0,0,5*i,0)
+    add_edge(matrixA,5*i,5*i,0,500-5*i,500,0)
+    add_edge(matrixA,5*i,5*i,0,500,500-5*i,0)
+    add_edge(matrixA,500-5*i,5*i,0,0,500-5*i,0)
+    add_edge(matrixA,500-5*i,5*i,0,5*i,500,0)
+    add_edge(matrixA,5*i,500-5*i,0,500-5*i,0,0)
+    add_edge(matrixA,5*i,500-5*i,0,500,5*i,0)
 
 draw_lines( matrixA, screen, color )
 display(screen)
