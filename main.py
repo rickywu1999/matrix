@@ -38,9 +38,12 @@ print_matrix(matrix4)
 print("")
 
 #actual picture
-matrixA = new_matrix()
 
 for i in range(100):
+    matrixA = new_matrix()
+    color[2]+=2
+    color[1]-=2
+    color[0]+=2
     add_edge(matrixA,500-5*i,500-5*i,0,5*i,0,0)
     add_edge(matrixA,500-5*i,500-5*i,0,0,5*i,0)
     add_edge(matrixA,5*i,5*i,0,500-5*i,500,0)
@@ -49,6 +52,6 @@ for i in range(100):
     add_edge(matrixA,500-5*i,5*i,0,5*i,500,0)
     add_edge(matrixA,5*i,500-5*i,0,500-5*i,0,0)
     add_edge(matrixA,5*i,500-5*i,0,500,5*i,0)
-
-draw_lines( matrixA, screen, color )
+    draw_lines( matrixA, screen, color )
+    
 display(screen)
