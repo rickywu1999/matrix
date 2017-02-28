@@ -37,6 +37,18 @@ print("Result:")
 print_matrix(matrix4)
 print("")
 
+print("Here's a matrix:")
+matrix5 = new_matrix()
+add_edge(matrix5,1,1,1,1,1,1)
+add_edge(matrix5,1,1,1,1,1,1)
+print_matrix(matrix5)
+print("")
+
+print("Multiply the previous two matrices:")
+matrix6 = matrix_mult(matrix4,matrix5)
+print_matrix(matrix6)
+print("")
+
 #actual picture
 
 for i in range(100):
